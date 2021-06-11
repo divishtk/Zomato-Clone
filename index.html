@@ -1,25 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
-</head>
-<style>
-*
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Merriweather", serif;
+      background-color: #ebf2eb;
+    }
+
+    .navs {
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+    }
+
+    .brand {
+      width: 100px;
+    }
+
+    .logo {
+      border: 2px solid red;
+      width: 100%;
+    }
+
+    .nav_item {
+      background-image: linear-gradient(
+        to right,
+        #ff512f 0%,
+        #dd2476 51%,
+        #ff512f 100%
+      );
+      color:#fff;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+
+    }
+
+
+
+@media(min-width: 768px)
 {
 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.navs{
+    justify-content: space-between;
+    padding: 10px 30px;
 
 }
 
-</style>
-<body>
-    
+
+}
+
+@media(min-width: 1020px)
+{
+
+    .brand{
+
+        width: 150px;
+
+    }
 
 
 
-</body>
+}
+
+  </style>
+  <body>
+    <header>
+      <nav class="navs">
+        <div class="brand">
+          <img src="assets/logo.png" alt="logo" class="logo" />
+        </div>
+        <div class="navbar_items">
+          <button class="nav_item">Order Now</button>
+        </div>
+      </nav>
+    </header>
+  </body>
 </html>
