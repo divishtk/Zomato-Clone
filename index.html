@@ -1,94 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-</head>
-<style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Merriweather", serif;
+      background-color: #ebf2ff;
+    }
 
-*{
+    .navbar {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #fff;
+    }
 
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+    .navbar-brand {
+      width: 100px;
+    }
+    .navbar-logo {
+      width: 100%;
+    }
 
-}
-body{
+    .primary-button {
+      background-image: linear-gradient(
+        to right,
+        #ff512f 0%,
+        #dd2476 51%,
+        #ff512f 100%
+      );
+      border: none;
+      padding: 10px 10px;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+    }
 
-font-family: 'Merriweather', serif;
-background-color:#ebf2ff; 
-}
+    /*HERO SECTION*/
 
-.navbar{
+    .container {
+      width: 100%;
+      margin: 0 auto;
+      padding: 9px 10px;
+    }
 
-  display: flex;
-  justify-content:space-around;
-  align-items:center;
-   background-color:#fff;;
-  
-}
+    .hero-image-container {
+      width: 100%;
+      position: relative;
+    }
 
-.navbar-brand{
+    .hero-image {
+      width: 100%;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      border-radius: 7px;
+      position: absolute;
+    }
 
-width: 100px;
+    .shape {
+      position: absolute;
+      right: 2px;
+      z-index: -1;
+    }
 
-}
-.navbar-logo{
-  width:100%;
-}
+    .hero-text {
+      font-size: 30px;
+      color: #1d3557;
+      margin: 20px 0;
+    }
 
-  .primary-button{
+    /*MENU*/
 
-    background-image: linear-gradient(
-  to right,
-  #ff512f 0%,
-  #dd2476 51%,
-  #ff512f 100%
-);
-border:none;
-padding:10px 10px;
-border-radius: 5px;
-color: #fff;
-cursor: pointer;
+    .food-menu-card {
+      width: 100%;
+      background-color: #fff;
+      border-radius: 9px;
+      margin-bottom: 12px;
+    }
 
-  }
+    .food-image {
+      width: 100%;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .food-menu-card-description {
+      padding: 15px;
+    }
+
+    .menu-text {
+      font-size: 30px;
+      color: #1d3557;
+      margin: 10px 0;
+    }
+
+    .explore-menu-container {
+      margin-top: 60px;
+      text-align: center;
+    }
 
 
 
-
-/*HERO SECTION*/
-
-.container{
+.restaurants-flex-row1,.restaurants-flex-row2{
   width: 100%;
-  margin: 0 auto;
-  padding: 9px 10px;
-}
-
-.hero-image-container{
-width: 100%;
-position: relative;
+  display:flex;
 }
 
 
+.restaurant1,.restaurant2,.restaurant3,.restaurant4 {
 
+width:100%;
 
-
-.hero-image{
-  
-  width: 100%;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  border-radius: 7px;
-  position: absolute;
 
 }
 
-.shape{
-  position: absolute;
-  right: 2px;
-  z-index:-1 ;
+.restaurant2,.restaurant4{
+
+height: 200px;
 }
 
 
@@ -100,302 +139,204 @@ position: relative;
 
 
 
-
-.hero-text{
-font-size: 30px;
-color:#1d3557;
-margin: 20px 0;
-}
-
-
-
-
-
-
-
-/*MENU*/
-
-.food-menu-card{
- width:100%;
- background-color:#fff;
- border-radius: 9px;
-margin-bottom: 12px;
-}
-
-
-.food-image{
-  width: 100%;
-  border-radius: 8px 8px 0 0 ;
-}
-
-.food-menu-card-description{
-  padding:15px;
-}
-
-
-
-
-.menu-text{
-  font-size: 30px;
-  color: #1d3557;
-  margin:10px 0;
-}
-
-.explore-menu-container{
-  margin-top: 60px;
-  text-align: center;
-}
-
-
-
-
-
-/*MEDIA QUERY*/
-
-  /*For Tablet*/
-  @media(min-width: 768px)
-{
-  .navbar{
-  justify-content: space-between;
-  padding: 0px 10px;
-}
-
-.navbar-brand{
-  width: 150px;
-}
-
-.primary-button{
-
-padding: 12px 20px;
-font-size: 16px;
-}
-
-.hero-container{
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  padding: 10px;
-}
-
-
-.explore-menu-lists{
-
-display: flex;
-gap: 12px;
-margin-top: 50px;
-
-}
-
-#pizza-id{
-  margin-top: -20px;
-}
-
-
-
-.explore-menu-container{
-
-  position: relative;
-}
-
-.explore-menu-rohumus-gradient{
-  position: absolute;
-  background-image: linear-gradient(
-  to right,
-  #ff512f 0%,
-  #dd2476 51%,
-  #ff512f 100%
-);
-left: 0;
-top: 0;
-width: 100%;
-height: 100%;
-z-index: -3;
-transform: skewY(-5deg);
-}
-
-}
-
-
-
-
-
-/*For PC*/
-@media(min-width: 1020px)
-{
-
-
-  .container{
-
-    max-width: 900px;
-  
-
-  }
-
-.hero-container{
-  justify-content: space-between;
-  gap:10px ;
-
-}
-
-.hero-text{
-
- font-size: 50px; 
-}
-
-
-
-.explore-menu-lists{
-  gap:  20px;
-  padding:0 20px;
-}
-
-.menu-text{
-  font-size: 50px;
-  
-}
-
-
-}
-/*PC WITH LARGER SCREEN*/
-@media(min-width: 1400px)
-{
-
-.container{
-  max-width: 1180px;
-}
-
-
-
-
-}
-</style>
-<body>
-  <header>
-
-    <nav class="navbar">
-
-      <div class="navbar-brand">
-        <img src="/assets/logo.png" alt="logo" class="navbar-logo">
-      </div>
-      <div class="navbar-items">
-
-
-        <button class="primary-button">Order now</button>
-
-      </div>
-
-    </nav>
-  </header>
-
-
-  <main class="container">
-  <!--HERO SECTION-->
-    <section class="hero-container">
-
-      <div class="hero-image-container">
-
-        <img src="./assets/hero.jpg" alt="hero-image" class="hero-image">
-        <img src="assets/svg/herobgpattren.svg" alt="pattern" class="pattern">
-        <img src="assets/svg/heroShape.svg" alt="shape" class="shape">
-
-
-
-
-      </div>
-      <div class="hero-decription">
-    <h1 class="hero-text">Order Food From Favourite Restaurants Near You.</h1>
-        <button class="primary-button">Order Now</button>
-      </div>
-       
-
-
-    </section>
-
-
-
-
-    <!--Explore menu-->
-
-    <section class="explore-menu-container">
-
-      <h1 class="menu-text">Explore Our Menu</h1>
-
-
-<div class="explore-menu-rohumus-gradient">
-
-
-
-</div>
+    /*MEDIA QUERY*/
+
+    /*For Tablet*/
+    @media (min-width: 768px) {
+      .navbar {
+        justify-content: space-between;
+        padding: 0px 10px;
+      }
+
+      .navbar-brand {
+        width: 150px;
+      }
+
+      .primary-button {
+        padding: 12px 20px;
+        font-size: 16px;
+      }
+
+      .hero-container {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 10px;
+      }
+
+      .explore-menu-lists {
+        display: flex;
+        gap: 12px;
+        margin-top: 50px;
+      }
+
+      #pizza-id {
+        margin-top: -20px;
+      }
+
+      .explore-menu-container {
+        position: relative;
+      }
+
+      .explore-menu-rohumus-gradient {
+        position: absolute;
+        background-image: linear-gradient(
+          to right,
+          #ff512f 0%,
+          #dd2476 51%,
+          #ff512f 100%
+        );
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -3;
+        transform: skewY(-5deg);
+      }
+    }
+
+    /*For PC*/
+    @media (min-width: 1020px) {
+      .container {
+        max-width: 900px;
+      }
+
+      .hero-container {
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .hero-text {
+        font-size: 50px;
+      }
+
+      .explore-menu-lists {
+        gap: 20px;
+        padding: 0 20px;
+      }
+
+      .menu-text {
+        font-size: 50px;
+      }
+    }
+    /*PC WITH LARGER SCREEN*/
+    @media (min-width: 1400px) {
+      .container {
+        max-width: 1180px;
+      }
+    }
+  </style>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <img src="/assets/logo.png" alt="logo" class="navbar-logo" />
+        </div>
+        <div class="navbar-items">
+          <button class="primary-button">Order now</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <!--HERO SECTION-->
+      <section class="hero-container">
+        <div class="hero-image-container">
+          <img src="./assets/hero.jpg" alt="hero-image" class="hero-image" />
+          <img
+            src="assets/svg/herobgpattren.svg"
+            alt="pattern"
+            class="pattern"
+          />
+          <img src="assets/svg/heroShape.svg" alt="shape" class="shape" />
+        </div>
+        <div class="hero-decription">
+          <h1 class="hero-text">
+            Order Food From Favourite Restaurants Near You.
+          </h1>
+          <button class="primary-button">Order Now</button>
+        </div>
+      </section>
+
+      <!--Explore menu-->
+
+      <section class="explore-menu-container">
+        <h1 class="menu-text">Explore Our Menu</h1>
+
+        <div class="explore-menu-rohumus-gradient"></div>
         <div class="explore-menu-lists">
+          <!--BURGER-->
+          <div class="food-menu-card">
+            <img src="assets/burger.jpg" alt="burger" class="food-image" />
 
-
-
-<!--BURGER-->
-        <div class="food-menu-card">
-
-          <img src="assets/burger.jpg" alt="burger" class="food-image">
-
-          <div class="food-menu-card-description">
-
-            <h3 class="food-title">Burgers</h3>
-            <p class="food-restaurant">Burger King,Mc Donalds <span style="color:red">+3</span></p>
-
+            <div class="food-menu-card-description">
+              <h3 class="food-title">Burgers</h3>
+              <p class="food-restaurant">
+                Burger King,Mc Donalds <span style="color: red">+3</span>
+              </p>
+            </div>
           </div>
 
+          <!--PIZZA-->
+          <div class="food-menu-card" id="pizza-id">
+            <img src="assets/pizza.jpg" alt="pizza" class="food-image" />
 
-        </div>
-
-
-
-
-        <!--PIZZA-->
-        <div class="food-menu-card" id="pizza-id">
-
-          <img src="assets/pizza.jpg" alt="pizza" class="food-image">
-
-          <div class="food-menu-card-description">
-
-            <h3 class="food-title">Pizza</h3>
-            <p class="food-restaurant">Pizza,Dominos,Joeys <span style="color:red">+3</span></p>
-
+            <div class="food-menu-card-description">
+              <h3 class="food-title">Pizza</h3>
+              <p class="food-restaurant">
+                Pizza,Dominos,Joeys <span style="color: red">+3</span>
+              </p>
+            </div>
           </div>
 
+          <!--ICECRWAM-->
+          <div class="food-menu-card">
+            <img src="assets/iceCream.jpg" alt="ice_cream" class="food-image" />
 
-        </div>
-
-
-
-
-
-        <!--ICECRWAM-->
-        <div class="food-menu-card">
-
-          <img src="assets/iceCream.jpg" alt="ice_cream" class="food-image">
-
-          <div class="food-menu-card-description">
-
-            <h3 class="food-title">IceCream</h3>
-            <p class="food-restaurant">Gelatos,Naturals <span style="color:red">+3</span></p>
-
+            <div class="food-menu-card-description">
+              <h3 class="food-title">IceCream</h3>
+              <p class="food-restaurant">
+                Gelatos,Naturals <span style="color: red">+3</span>
+              </p>
+            </div>
           </div>
-
-
         </div>
-
-      </div>
-      <button class="primary-button">View More</button>
-
-
-    </section>
-
-
-    
-
-
-</main>
+        <button class="primary-button">View More</button>
+      </section>
 
 
 
 
-</body>
+        <!--RETAURANTS-->
+    <!--    <section class="restaurants-containers">
+
+          <h1 class="restaurants-text">Order From 100s Of Restaurants</h1>
+
+            <div class="restaurants-flex">
+
+                <div class="restaurants-flex-row1">
+
+                  <img src="assets/restaurant1.jpg" alt="rest1" class="restaurant1">
+                  <img src="assets/restaurant2.jpg" alt="rest2" class="restaurant2">
+
+
+                </div>      
+                
+                <div class="restaurants-flex-row2">
+                  <img src="assets/restaurant3.jpg" alt="rest3" class="restaurant3">
+                  <img src="assets/restaurant4.jpg" alt="rest4" class="restaurant4">
+
+
+
+                  
+                </div>   
+
+            </div>
+
+
+
+        </section>-->
+
+    </main>
+  </body>
 </html>
