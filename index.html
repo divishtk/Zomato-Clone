@@ -1,290 +1,232 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
   <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
-
 <style>
 
-*
-{
+*{
 
-  margin:0;
-  padding:0;
-  box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 
 }
-
 body{
 
-  font-family: 'Merriweather', serif;
-  background-color:#ebf2ff; 
+font-family: 'Merriweather', serif;
+background-color:#ebf2ff; 
 }
 
+.navbar{
 
-
-
-
-.navbar{  
-  display:flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color:#fff;
+  display: flex;
+  justify-content:space-around;
+  align-items:center;
+   background-color:#fff;;
+  
 }
-
-
-
-
-
-
-
 
 .navbar-brand{
 
-/*border:2px solid red;*/
-width:100px;
+width: 100px;
 
 }
-
-.navbar-brand img{
-
+.navbar-logo{
   width:100%;
 }
 
+  .primary-button{
 
-.nav-item{
-
-  background-image: linear-gradient(
+    background-image: linear-gradient(
   to right,
   #ff512f 0%,
   #dd2476 51%,
   #ff512f 100%
 );
-color: #fff;
 border:none;
-padding:12px 20px;
-border-radius:6px;
-cursor: pointer;
-}
-
-.btn-primary{
-  background-image: linear-gradient(
-  to right,
-  #ff512f 0%,
-  #dd2476 51%,
-  #ff512f 100%
-);
+padding:10px 10px;
+border-radius: 5px;
 color: #fff;
-border:none;
-padding:12px 20px;
-border-radius:6px;
 cursor: pointer;
 
-}
-
-
-.nav-item:hover{
-background-position: right center;
-}
+  }
 
 
 
 
-/*CONTAINER*/
+/*HERO SECTION*/
+
 .container{
-
-max-width: 100%;
-padding:10px 20px;
-margin:0 auto;
-
+  width: 100%;
+  margin: 0 auto;
+  padding: 9px 10px;
 }
-
-/*HERO CONTAINER*/
 
 .hero-image-container{
-
 width: 100%;
 position: relative;
 }
 
 
+
+
+
 .hero-image{
-
-width:100%;
-border-radius: 8px;
-box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-
-}
-
-
-.svg2{
+  
+  width: 100%;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
   position: absolute;
-  right: 2;
 
 }
+
+.shape{
+  position: absolute;
+  right: 2px;
+  z-index:-1 ;
+}
+
+
+
+
+
+
+
+
 
 
 
 .hero-text{
-
 font-size: 30px;
+color:#1d3557;
+margin: 20px 0;
 }
 
-.hero-discription button{
-margin:17px 0;
-}
 
+/*MEDIA QUERY*/
 
-
-
-/*MEDIA QUERY FOR MOBILE DEVICES*/
-@media (min-width: 768px) 
+  /*For Tablet*/
+  @media(min-width: 768px)
 {
-
   .navbar{
+  justify-content: space-between;
+  padding: 0px 10px;
+}
 
-    justify-content: space-between;
-    padding:10px 30px;
-  }
+.navbar-brand{
+  width: 150px;
+}
 
-  .hero-container{
+.primary-button{
 
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
+padding: 12px 20px;
+font-size: 16px;
+}
+
+.hero-container{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding: 10px;
+}
+
 }
 
 
 
-/*MEDIA QUERY FOR LAPTOP DEVICES*/
 
-@media (min-width:1028px)
+
+/*For PC*/
+@media(min-width: 1020px)
 {
+
 
   .container{
 
     max-width: 900px;
+  
 
+  }
 
+.hero-container{
+  justify-content: space-between;
+  gap:10px ;
 
 }
 
-  .navbar{
-
-    padding:1px 15px;
-
-  }
-
-  .navbar-brand{
-
-    width:100px;
-  }
-
-  .btn-primary{
-
-    padding:20px;
-    font-size: 20px;
- }
- 
- .hero-discription{
-width:100%;
- }
-
- 
 .hero-text{
-  font-size:50px;
-}
-  
-}
 
-
-@media (min-width:1400px){
-
-  .container{
-
-    max-width: 1250px;
-
-  }
+ font-size: 50px; 
 }
 
 
+}
+/*PC WITH LARGER SCREEN*/
+@media(min-width: 1400px)
+{
+
+.container{
+  max-width: 1180px;
+}
 
 
 
 
+}
 </style>
-
 <body>
-  
-
   <header>
 
     <nav class="navbar">
 
       <div class="navbar-brand">
-
-        <img src="assets/logo.png" alt="logo" class="nav-logo">
-
+        <img src="/assets/logo.png" alt="logo" class="navbar-logo">
       </div>
-
-      <div class="nav-items">
-
-        <button class="nav-item btn-primary">Order Now</button>
+      <div class="navbar-items">
 
 
+        <button class="primary-button">Order now</button>
 
       </div>
 
     </nav>
-    </header>
+  </header>
 
 
-    <main class="container">
+  <main class="container">
+  <!--HERO SECTION-->
+    <section class="hero-container">
 
+      <div class="hero-image-container">
 
-      <!--HERO SECTION-->
-
-      <section class="hero-container">
-
-        <div class="hero-image-container">
-
-          <img src="assets/hero.jpg" alt="hero-image" class="hero-image">
-          <img src="assets/svg/herobgpattren.svg"  alt="svg1" class="svg1">
-          <img src="assets/svg/heroShape.svg" alt="svg2" class="svg2">
-
-
-        </div>
-
-        
-        <div class="hero-discription">
-
-          <h1 class="hero-text">Order Food From Favourite Restaurants Near You </h1>
-
-          <button class="btn-primary">Order Now</button>
-
-        </div>
-
-        </section>
+        <img src="./assets/hero.jpg" alt="hero-image" class="hero-image">
+        <img src="assets/svg/herobgpattren.svg" alt="pattern" class="pattern">
+        <img src="assets/svg/heroShape.svg" alt="shape" class="shape">
 
 
 
 
-    </main>
+      </div>
+      <div class="hero-decription">
+    <h1 class="hero-text">Order Food From Favourite Restaurants Near You.</h1>
+        <button class="primary-button">Order Now</button>
+      </div>
+       
+
+
+    </section>
+
+
+
+</main>
 
 
 
 
 </body>
 </html>
-
-
-
