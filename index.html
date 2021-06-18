@@ -112,25 +112,59 @@
 
 
 
+
+/*RESTAURANTS IMAGES FLEX*/
+
+
 .restaurants-flex-row1,.restaurants-flex-row2{
-  width: 100%;
+    width: 100%;
   display:flex;
+  gap:12px;
+}
+
+.restaurants-flex-row1{
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.restaurant1-image,
+.restaurant2-image,
+.restaurant3-image,
+.restaurant4-image
+{
+
+  width:100%;
+  height: 100%;
+  border-radius:7px;
+
 }
 
 
-.restaurant1,.restaurant2,.restaurant3,.restaurant4 {
+.restaurant-1,.restaurant-4 {
 
 width:100%;
+height: 150px;
+
+
+
+
 
 
 }
 
-.restaurant2,.restaurant4{
+.restaurant-2,.restaurant-3{
 
-height: 200px;
+width: 120%;
+height: 180px;
+
 }
 
-
+.restaurants-text{
+  font-size: 30px;
+      color: #1d3557;
+     text-align: center;
+  margin-top:10px;
+}
 
 
 
@@ -193,6 +227,28 @@ height: 200px;
         z-index: -3;
         transform: skewY(-5deg);
       }
+
+
+
+
+      .restaurants-text{
+  font-size: 35px;
+  width: 100%;
+     
+ 
+}
+.restaurants-containers{
+  display: flex;
+  align-items: center;
+}
+
+  .restaurants-flex{
+
+width: 100%;
+
+  }
+
+
     }
 
     /*For PC*/
@@ -217,6 +273,12 @@ height: 200px;
 
       .menu-text {
         font-size: 50px;
+      }
+      .restaurants-containers{
+
+
+        margin-top:40px;
+        gap:30px;
       }
     }
     /*PC WITH LARGER SCREEN*/
@@ -308,26 +370,42 @@ height: 200px;
 
 
         <!--RETAURANTS-->
-    <!--    <section class="restaurants-containers">
+   <section class="restaurants-containers">
 
           <h1 class="restaurants-text">Order From 100s Of Restaurants</h1>
 
             <div class="restaurants-flex">
 
                 <div class="restaurants-flex-row1">
+                  <div class="restaurant-1">
 
-                  <img src="assets/restaurant1.jpg" alt="rest1" class="restaurant1">
-                  <img src="assets/restaurant2.jpg" alt="rest2" class="restaurant2">
+                 
 
+                  <img src="assets/restaurant1.jpg" alt="rest1" class="restaurant1-image">
+                </div>
 
+                <div class="restaurant-2">
+
+           
+                  <img src="assets/restaurant2.jpg" alt="rest2" class="restaurant2-image">
+
+                </div>
                 </div>      
                 
                 <div class="restaurants-flex-row2">
-                  <img src="assets/restaurant3.jpg" alt="rest3" class="restaurant3">
-                  <img src="assets/restaurant4.jpg" alt="rest4" class="restaurant4">
+
+                  <div class="restaurant-3">
+
+                 
+                  <img src="assets/restaurant3.jpg" alt="rest3" class="restaurant3-image">
+                </div>
+                <div class="restaurant-4">
+
+              
+                  <img src="assets/restaurant4.jpg" alt="rest4" class="restaurant4-image">
 
 
-
+                </div>
                   
                 </div>   
 
@@ -335,7 +413,7 @@ height: 200px;
 
 
 
-        </section>-->
+        </section>
 
     </main>
   </body>
