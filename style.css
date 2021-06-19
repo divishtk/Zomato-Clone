@@ -1,0 +1,456 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Merriweather", serif;
+    background-color: #ebf2ff;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+  }
+
+  .navbar-brand {
+    width: 100px;
+  }
+  .navbar-logo {
+    width: 100%;
+  }
+
+  .primary-button {
+    background-image: linear-gradient(
+      to right,
+      #ff512f 0%,
+      #dd2476 51%,
+      #ff512f 100%
+    );
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /*HERO SECTION*/
+
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 9px 10px;
+  }
+
+  .hero-image-container {
+    width: 100%;
+    position: relative;
+  }
+
+  .hero-image {
+    width: 100%;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+    position: absolute;
+  }
+
+  .shape {
+    position: absolute;
+    right: 2px;
+    z-index: -1;
+  }
+
+  .hero-text {
+    font-size: 30px;
+    color: #1d3557;
+    margin: 20px 0;
+  }
+
+  /*MENU*/
+
+  .food-menu-card {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 9px;
+    margin-bottom: 12px;
+  }
+
+  .food-image {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .food-menu-card-description {
+    padding: 15px;
+  }
+
+  .menu-text {
+    font-size: 30px;
+    color: #1d3557;
+    margin: 10px 0;
+  }
+
+  .explore-menu-container {
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  /*RESTAURANTS IMAGES FLEX*/
+
+  .restaurants-flex-row1,
+  .restaurants-flex-row2 {
+    width: 100%;
+    display: flex;
+    gap: 12px;
+  }
+
+  .restaurants-flex-row1 {
+    align-items: baseline;
+    margin-bottom: 10px;
+  }
+
+  .restaurant1-image,
+  .restaurant2-image,
+  .restaurant3-image,
+  .restaurant4-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+  }
+
+  .restaurant-1,
+  .restaurant-4 {
+    width: 100%;
+    height: 150px;
+  }
+
+  .restaurant-2,
+  .restaurant-3 {
+    width: 120%;
+    height: 180px;
+  }
+
+  .restaurants-text {
+    font-size: 30px;
+    color: #1d3557;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /*UPDATED TEXT*/
+
+  .text-container {
+    margin-top: 40px;
+  }
+
+  .updated-text {
+    font-size: 30px;
+    color: #1d3557;
+    text-align: center;
+  }
+
+  .buttonandtext {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .text {
+    border: 1px solid rgb(247, 74, 74);
+    border-radius: 1px;
+    padding: 0 20px;
+    border-radius: 4px;
+  }
+
+
+
+
+/*QUOTE IMAGE*/
+
+.quote-container{
+
+position: relative;
+background: url("https://images.unsplash.com/photo-1522336572468-97b06e8ef143?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80");
+width:100%;
+height: 200px;
+border-radius:12px;
+margin-top: 35px;
+display: flex;
+align-items: center;
+justify-content:center;
+
+}
+
+
+.quote-image-overlay{
+  width:100%;
+  height: 200px;
+  background-color: #0a4065;
+  border-radius: 12px;
+  opacity: 49%  ;
+  position: absolute;
+
+}
+
+
+
+.quote-text{
+color: #fff;
+z-index: 2;
+text-align: center;
+
+}
+
+
+
+
+
+
+
+
+
+/*
+.quote-container{
+
+    position: relative;
+    
+}
+
+.quote-image-class{
+
+    width: 100%;
+    height: 40%;
+   
+
+
+}
+.image-overlay{
+
+    position: absolute;
+    height: 280px;
+    width: 100%;
+    border-radius: 13px;
+    background-color: #0a4065;
+    opacity: 49%;
+    
+  
+
+}
+
+.quote-image{
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    margin-top: 55px;
+    background-color: #0a4065;
+    opacity: 125%;
+    z-index: -3;
+
+    
+   
+}
+
+.quote-text{
+
+    font-size: 23px;
+    color: #1d3557;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top:44%;
+    z-index: 3;
+
+    
+
+}*/
+
+
+
+
+
+
+
+
+
+
+  /*MEDIA QUERY*/
+
+  /*For Tablet*/
+  @media (min-width: 768px) {
+    .navbar {
+      justify-content: space-between;
+      padding: 0px 10px;
+    }
+
+    .navbar-brand {
+      width: 150px;
+    }
+
+    .primary-button {
+      padding: 12px 20px;
+      font-size: 16px;
+    }
+
+    .hero-container {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .explore-menu-lists {
+      display: flex;
+      gap: 12px;
+      margin-top: 50px;
+    }
+
+    #pizza-id {
+      margin-top: -20px;
+    }
+
+    .explore-menu-container {
+      position: relative;
+    }
+
+    .explore-menu-rohumus-gradient {
+      position: absolute;
+      background-image: linear-gradient(
+        to right,
+        #ff512f 0%,
+        #dd2476 51%,
+        #ff512f 100%
+      );
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -3;
+      transform: skewY(-5deg);
+    }
+
+    .restaurants-text {
+      font-size: 35px;
+      width: 100%;
+    }
+    .restaurants-containers {
+      display: flex;
+      align-items: center;
+    }
+
+    .restaurants-flex {
+      width: 100%;
+    }
+
+    .updated-text {
+      font-size: 35px;
+    }
+
+    .text {
+      width: 300px;
+    }
+
+
+
+    .quote-container{
+
+      width:100%;
+      height: 300px;
+     
+      
+      }
+
+      .quote-image-overlay{
+        width:100%;
+        height: 300px;
+      
+      
+      }
+      .quote-text{
+        font-size:30px;
+        line-height: 1.2;
+
+        
+        }
+      
+  }
+
+  /*For PC*/
+  @media (min-width: 1020px) {
+    .container {
+      max-width: 900px;
+    }
+
+    .hero-container {
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .hero-text {
+      font-size: 50px;
+    }
+
+    .explore-menu-lists {
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .menu-text {
+      font-size: 50px;
+    }
+
+    .restaurant-1,
+    .restaurant-4 {
+      width: 50%;
+      height: 155px;
+    }
+
+    .restaurant-2,
+    .restaurant-3 {
+      width: 80%;
+      height: 200px;
+    }
+
+    .restaurant1-image,
+    .restaurant2-image,
+    .restaurant3-image,
+    .restaurant4-image {
+      width: 100%;
+      height: 100%;
+    }
+
+    .restaurants-containers {
+      margin-top: 40px;
+      gap: 40px;
+    }
+
+    .updated-text {
+      font-size: 50px;
+    }
+
+    .text {
+      width: 400px;
+    }
+
+    .text-container {
+      margin-top: 60px;
+    }
+
+    .quote-container{
+      width:100%;
+      height: 300px;
+      background-size: cover;
+    }
+    .quote-text{
+font-size:40px;
+
+    }
+  }
+  /*PC WITH LARGER SCREEN*/
+  @media (min-width: 1400px) {
+    .container {
+      max-width: 1180px;
+    }
+  }
